@@ -1,9 +1,9 @@
-FROM nginx:alpine
+# Example Node.js project
+FROM node:18
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+EXPOSE 3000
+CMD ["npm", "start"]
 
-RUN rm -rf /usr/share/nginx/html/*
-
- COPY . /usr/share/nginx/html
-
- EXPOSE 80
-
- CMD["nginx","-g","daemon off;"]
