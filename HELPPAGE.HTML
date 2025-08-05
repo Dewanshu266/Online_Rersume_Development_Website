@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="pragma" content="no-cache"/>
+  <title>CV Maker | Help Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+  <script src="main.js"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <link rel="icon" type="image/x-icon" href="img/daiictlogo.jpg">
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-messaging.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-functions.js"></script>
+
+  <script src="app.js"></script>
+  <script src="functions.js"></script>
+
+  <style>
+    img {
+      opacity: 1;
+    }
+
+    .zoomin img {
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+      transition: all 0.5s ease;
+    }
+
+    .zoomin img:hover {
+      padding: 0px;
+      width: 150%;
+    }
+
+    .row-content {
+      margin: 5% auto;
+      padding: 5%;
+      border-left: 5px ridge;
+      min-height: 400px;
+      background: rgba(253, 7, 7, 0.472);
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
+    .row {
+      background-color: #5D4C41;
+      color: floralwhite;
+    }
+
+    h1 {
+      color: gainsboro;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Main Navigation -->
+  <header class="my-fixed-tab">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark my-opac-bg">
+      <div class="container">
+        <a class="navbar-brand" href="">CVMaker</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+          aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link smooth-link waves-effect waves-light" href="index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link smooth-link" href="index.html#temp-section">Templates</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link smooth-link" href="index.html#placement-cell">Placement Cell</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="my-main">
+    <div class="container">
+      <h1><b>If you are a student or a professional</b></h1>
+
+      <div class="row row-content align-items-center">
+        <div class="col-4">
+          <h1><b>Welcome</b></h1>
+          <p style="font-size:24px">
+            To make precise and beautiful Resumes, you need to login using Google Sign-in.
+            Click on "Login with Google" at the top-right corner of the page.
+          </p>
+        </div>
+        <div class="col-8">
+          <img src="img/HelpPage/welcome01.png" class="w-100" style="max-width: 720px; max-height:480px">
+        </div>
+      </div>
+
+      <div class="row row-content align-items-center">
+        <div class="col-7">
+          <img src="img/HelpPage/templateSelection.png" class="w-100" style="max-width: 720px; max-height:480px">
+        </div>
+        <div class="col-5">
+          <h1><b>Select the template</b></h1>
+          <p style="font-size:24px">
+            We have several beautiful templates available, which help you create concise and readable CVs.
+          </p>
+        </div>
+      </div>
+
+      <div class="row row-content align-items-center">
+        <div class="col-4">
+          <h1><b>Make your Resume</b></h1>
+          <p style="font-size:24px">
+            Fill in your personal details, educational qualifications, skills, hobbies, etc. in the resume template.
+          </p>
+        </div>
+        <div class="col-8">
+          <img src="img/HelpPage/Print_Download01.png" class="w-100" style="max-width:720px; max-height:480px">
+        </div>
+      </div>
+
+      <div class="row row-content align-items-center">
+        <div class="col-8">
+          <img src="img/HelpPage/Print_Download02.png" class="w-100" style="max-width:700px; max-height:480px">
+        </div>
+        <div class="col-4">
+          <h1><b>Download</b></h1>
+          <p style="font-size:24px">
+            After completing the details, click on the Print/Save button to download your resume as a PDF.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" style="padding-top:100px">
+      <h1><b>If you are a Placement Cell of an institute</b></h1>
+
+      <div class="row row-content align-items-center">
+        <div class="col-4">
+          <h1><b>Sign In</b></h1>
+          <p style="font-size:24px">
+            As a placement cell representative, you can upload templates your institute uses.
+            Sign in or register to get started.
+          </p>
+        </div>
+        <div class="col-8">
+          <img src="img/HelpPage/placementCell.png" class="w-100" style="max-width:720px; max-height:480px">
+        </div>
+      </div>
+
+      <div class="row row-content align-items-center">
+        <div class="col-8">
+          <img src="img/HelpPage/register.png" class="w-100" style="max-width:700px; max-height:480px">
+        </div>
+        <div class="col-4">
+          <h1><b>Register your Institute</b></h1>
+          <p style="font-size:24px">
+            Enter the details in the form and click register. We will verify and contact you within 2–3 days.
+          </p>
+        </div>
+      </div>
+
+      <div class="row row-content align-items-center">
+        <div class="col-4">
+          <h1><b>Upload the template</b></h1>
+          <p style="font-size:24px">
+            Once logged in, click on upload to add your institute's resume PDF template.
+          </p>
+        </div>
+        <div class="col-8">
+          <img src="img/HelpPage/upload.png" class="w-100" style="max-width:720px; max-height:480px">
+        </div>
+      </div>
+
+      <div class="row row-content align-items-center">
+        <div class="col-8">
+          <img src="img/HelpPage/reply.png" class="w-100" style="max-width:720px; max-height:480px">
+        </div>
+        <div class="col-4">
+          <h1><b>Wait</b></h1>
+          <p style="font-size:24px">
+            After uploading the template, we will activate it for your students within 2–3 days.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div style="background-color:none" class="align-items-center">
+      <div class="col-12 text-center" style="padding:50px">
+        <h4 style="color:floralwhite">For further queries, email us at <a href="mailto:admin@cvmaker.com">admin@cvmaker.com</a></h4>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="page-footer font-small special-color-dark pt-4 my-footer">
+    <div class="container text-center">
+      <p>Share this Website</p>
+      <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+          <a class="btn-floating btn-fb mx-1"><i class="fab fa-facebook-f"></i></a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-tw mx-1"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-gplus mx-1"><i class="fab fa-google-plus-g"></i></a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-li mx-1"><i class="fab fa-linkedin-in"></i></a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-dribbble mx-1"><i class="fab fa-dribbble"></i></a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="text-center py-3">
+      Team Arrow: <a href="about.html">About Us</a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/mdb.js"></script>
+</body>
+</html>
